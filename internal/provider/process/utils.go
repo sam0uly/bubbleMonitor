@@ -4,7 +4,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 var procSlicePool = sync.Pool{

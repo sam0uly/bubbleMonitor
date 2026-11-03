@@ -5,7 +5,7 @@ import (
 
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/compat"
-	"github.com/N1xev/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/config"
 )
 
 // ThemePalette holds colors for the application. Fields are color.Color so each

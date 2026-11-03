@@ -12,7 +12,7 @@ import (
 	"github.com/shirou/gopsutil/v3/process"
 
 	// Import shared data types
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 // Message types for Bubble Tea

@@ -1,4 +1,6 @@
-//go:build linux && cgo
+//go:build linux && cgo && !noamd
+
+// `noamd` opt-out for packagers with stale amdsmi bindings; see hardware_amd_stub.go.
 
 package system
 
@@ -8,7 +10,7 @@ import (
 
 	"github.com/hhk7734/amdsmi.go"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 func fetchAmdGpus() []data.GpuInfo {

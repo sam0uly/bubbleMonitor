@@ -6,6 +6,9 @@ before:
   hooks:
     - go generate ./...
 
+gomod:
+  proxy: true
+
 builds:
   - id: bubbleMonitor
     main: ./cmd/bub
@@ -19,11 +22,20 @@ builds:
     goarch:
       - amd64
       - arm64
+    mod_timestamp: "{{ .CommitTimestamp }}"
+    flags:
+      - -trimpath
     overrides:
       - goos: linux
         goarch: amd64
         env:
           - CGO_ENABLED=1
+      - goos: linux
+        goarch: arm64
+        env:
+          - CGO_ENABLED=1
+          - CC=aarch64-unknown-linux-gnu-gcc
+          - CXX=aarch64-unknown-linux-gnu-g++
     hooks:
       post:
         - cp "{{ .Path }}" dist/bub_{{ .Os }}_{{ .Arch }}
@@ -36,7 +48,8 @@ builds:
 
 archives:
   - id: binaries
-    format: binary
+    formats:
+      - binary
     name_template: "bub_{{ .Os }}_{{ .Arch }}"
   - id: archives
     formats:

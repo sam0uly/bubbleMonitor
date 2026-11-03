@@ -1,8 +1,8 @@
-//go:build !linux || !cgo
+//go:build !linux || !cgo || noamd
 
 package system
 
-import "github.com/N1xev/bubbleMonitor/internal/data"
+import "samouly.fun/bubbleMonitor/internal/data"
 
 func fetchAmdGpus() []data.GpuInfo {
 	return nil

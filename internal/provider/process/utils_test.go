@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 func TestGetProcSliceTypeSafety(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"charm.land/lipgloss/v2"
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 // BenchmarkRenderSparkline tests memory allocations for sparkline rendering.

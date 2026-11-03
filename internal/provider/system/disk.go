@@ -8,8 +8,8 @@ import (
 	"github.com/shirou/gopsutil/v3/disk"
 	"github.com/shirou/gopsutil/v3/mem"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // DiskInfoCmd fetches disk partition information from two sources:

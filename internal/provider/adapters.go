@@ -4,10 +4,10 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/provider/process"
-	"github.com/N1xev/bubbleMonitor/internal/provider/remote"
-	"github.com/N1xev/bubbleMonitor/internal/provider/system"
+	"samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/provider/process"
+	"samouly.fun/bubbleMonitor/internal/provider/remote"
+	"samouly.fun/bubbleMonitor/internal/provider/system"
 )
 
 // SystemAdapter wraps system provider functions and implements SystemProvider interface.

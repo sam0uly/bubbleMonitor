@@ -5,8 +5,8 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 type ConfigChangeHandler interface {

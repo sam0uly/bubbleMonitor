@@ -4,7 +4,7 @@ import (
 	tea "charm.land/bubbletea/v2"
 	"github.com/shirou/gopsutil/v3/net"
 
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // NetworkInterfacesCmd fetches network interface stats

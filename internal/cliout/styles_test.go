@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/N1xev/bubbleMonitor/internal/cliout"
-	"github.com/N1xev/bubbleMonitor/internal/ui"
+	"samouly.fun/bubbleMonitor/internal/cliout"
+	"samouly.fun/bubbleMonitor/internal/ui"
 )
 
 func TestNew(t *testing.T) {

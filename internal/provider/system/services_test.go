@@ -6,7 +6,7 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // TestServicesCmd_Returns verifies the command produces a ServicesMsg

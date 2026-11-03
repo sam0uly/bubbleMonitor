@@ -9,10 +9,10 @@ import (
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 
-	"github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	messages "github.com/N1xev/bubbleMonitor/internal/msg"
-	"github.com/N1xev/bubbleMonitor/internal/provider/process"
+	"samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
+	messages "samouly.fun/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/provider/process"
 )
 
 var TitleCaser = cases.Title(language.English)

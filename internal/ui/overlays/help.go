@@ -6,8 +6,8 @@ import (
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/compat"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/ui/widgets"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/ui/widgets"
 )
 
 func RenderHelp(s *data.AppState, b, p, bg color.Color) string {

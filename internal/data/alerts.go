@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/N1xev/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/config"
 )
 
 type Alert struct {

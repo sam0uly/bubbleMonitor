@@ -1,4 +1,4 @@
-//go:build !linux || !cgo
+//go:build !linux || !cgo || nonnvml
 
 package system
 
@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 var (

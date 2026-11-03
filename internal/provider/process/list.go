@@ -9,8 +9,8 @@ import (
 	tea "charm.land/bubbletea/v2"
 	"github.com/shirou/gopsutil/v3/process"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // CachedProcessInfo stores the actual process object and its static data

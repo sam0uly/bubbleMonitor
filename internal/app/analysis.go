@@ -1,8 +1,8 @@
 package app
 
 import (
-	configpkg "github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	configpkg "samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 // UpdateHealthScore calculates the system health score based on critical metrics.

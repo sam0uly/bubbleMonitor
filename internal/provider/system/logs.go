@@ -8,7 +8,7 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // SystemLogsCmd returns the most recent system log entries.

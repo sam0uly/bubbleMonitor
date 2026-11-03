@@ -9,11 +9,11 @@ import (
 	tea "charm.land/bubbletea/v2"
 	"github.com/shirou/gopsutil/v3/net"
 
-	"github.com/N1xev/bubbleMonitor/internal/app/handlers"
-	"github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	messages "github.com/N1xev/bubbleMonitor/internal/msg"
-	"github.com/N1xev/bubbleMonitor/internal/provider/process"
+	"samouly.fun/bubbleMonitor/internal/app/handlers"
+	"samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
+	messages "samouly.fun/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/provider/process"
 )
 
 // Update handles all messages and updates the model

@@ -4,7 +4,7 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/N1xev/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/config"
 )
 
 // SystemProvider defines the interface for system metrics providers.

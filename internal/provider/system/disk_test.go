@@ -3,7 +3,7 @@ package system
 import (
 	"testing"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 func TestClassifyKind(t *testing.T) {

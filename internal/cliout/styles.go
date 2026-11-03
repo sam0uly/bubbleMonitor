@@ -5,7 +5,7 @@ package cliout
 
 import (
 	"charm.land/lipgloss/v2"
-	"github.com/N1xev/bubbleMonitor/internal/ui"
+	"samouly.fun/bubbleMonitor/internal/ui"
 )
 
 // CLIStyles holds pre-built lipgloss styles derived from a ThemePalette.

@@ -11,8 +11,8 @@ import (
 	tea "charm.land/bubbletea/v2"
 	"github.com/coreos/go-systemd/v22/dbus"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // ServicesCmd lists system services without shelling out.

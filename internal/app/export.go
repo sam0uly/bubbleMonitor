@@ -7,9 +7,9 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	configpkg "github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	configpkg "samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 func SaveSnapshotCmd(cpu, memory, disk float64, processCount int) tea.Cmd {

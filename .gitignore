@@ -8,3 +8,7 @@ bub.tape
 bub
 cpu.prof
 CLAUDE.md
+
+# Nix
+result*
+.direnv/

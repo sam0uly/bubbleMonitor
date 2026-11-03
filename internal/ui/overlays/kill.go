@@ -5,9 +5,9 @@ import (
 	"image/color"
 
 	"charm.land/lipgloss/v2"
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/ui/input"
-	"github.com/N1xev/bubbleMonitor/internal/ui/widgets"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/ui/input"
+	"samouly.fun/bubbleMonitor/internal/ui/widgets"
 )
 
 // RenderKillDialog renders the kill confirmation dialog using AppState

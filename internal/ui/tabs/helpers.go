@@ -1,7 +1,7 @@
 package tabs
 
 import (
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 // CalcNetPercent calculates network usage percentage

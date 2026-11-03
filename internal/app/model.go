@@ -5,11 +5,11 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
-	configpkg "github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/provider"
-	"github.com/N1xev/bubbleMonitor/internal/provider/system"
-	"github.com/N1xev/bubbleMonitor/internal/ui"
+	configpkg "samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/provider"
+	"samouly.fun/bubbleMonitor/internal/provider/system"
+	"samouly.fun/bubbleMonitor/internal/ui"
 	"github.com/shirou/gopsutil/v3/cpu"
 )
 

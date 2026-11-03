@@ -8,7 +8,7 @@ A beautiful terminal-based system monitor built with Go and BubbleTea. Track you
 
 **"shows you only what you want to see! 😄"**
 
-![bubbleMonitor Screenshot](./preview.png)
+![bubbleMonitor gif](bub.gif)
 
 ## Features
 

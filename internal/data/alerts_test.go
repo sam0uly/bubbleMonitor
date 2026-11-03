@@ -4,7 +4,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/N1xev/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/config"
 )
 
 func TestAlertManagerConcurrentAccess(t *testing.T) {

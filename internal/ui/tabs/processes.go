@@ -11,10 +11,10 @@ import (
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/compat"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/ui/input"
-	"github.com/N1xev/bubbleMonitor/internal/ui/widgets"
-	"github.com/N1xev/bubbleMonitor/internal/util"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/ui/input"
+	"samouly.fun/bubbleMonitor/internal/ui/widgets"
+	"samouly.fun/bubbleMonitor/internal/util"
 )
 
 // RenderProcesses renders the processes tab

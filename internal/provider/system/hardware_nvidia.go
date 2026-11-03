@@ -1,4 +1,4 @@
-//go:build linux && cgo
+//go:build linux && cgo && !nonnvml
 
 package system
 
@@ -11,7 +11,7 @@ import (
 
 	"github.com/NVIDIA/go-nvml/pkg/nvml"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 const nvmlInitTimeout = 3 * time.Second

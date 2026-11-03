@@ -1,6 +1,6 @@
 package ui
 
-import "github.com/N1xev/bubbleMonitor/internal/data"
+import "samouly.fun/bubbleMonitor/internal/data"
 
 // Layout Constants
 const (

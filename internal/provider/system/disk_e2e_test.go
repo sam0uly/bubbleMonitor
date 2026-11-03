@@ -3,7 +3,7 @@ package system
 import (
 	"testing"
 
-	"github.com/N1xev/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // End-to-end check: run DiskInfoCmd against the real host and verify

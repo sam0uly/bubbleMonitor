@@ -3,7 +3,7 @@ package testutil
 import (
 	"github.com/shirou/gopsutil/v3/process"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/data"
 )
 
 type MockProcessProvider struct {

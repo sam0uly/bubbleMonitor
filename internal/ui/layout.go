@@ -9,14 +9,14 @@ import (
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/compat"
-	"github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/msg"
-	"github.com/N1xev/bubbleMonitor/internal/provider/process"
-	"github.com/N1xev/bubbleMonitor/internal/ui/input"
-	"github.com/N1xev/bubbleMonitor/internal/ui/overlays"
-	"github.com/N1xev/bubbleMonitor/internal/ui/tabs"
-	"github.com/N1xev/bubbleMonitor/internal/ui/widgets"
+	"samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/provider/process"
+	"samouly.fun/bubbleMonitor/internal/ui/input"
+	"samouly.fun/bubbleMonitor/internal/ui/overlays"
+	"samouly.fun/bubbleMonitor/internal/ui/tabs"
+	"samouly.fun/bubbleMonitor/internal/ui/widgets"
 )
 
 func isNoColor(c color.Color) bool {

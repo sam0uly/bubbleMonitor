@@ -14,10 +14,10 @@ import (
 	"github.com/shirou/gopsutil/v3/net"
 	"github.com/shirou/gopsutil/v3/process"
 
-	"github.com/N1xev/bubbleMonitor/internal/config"
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	messages "github.com/N1xev/bubbleMonitor/internal/msg"
-	"github.com/N1xev/bubbleMonitor/internal/provider"
+	"samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/data"
+	messages "samouly.fun/bubbleMonitor/internal/msg"
+	"samouly.fun/bubbleMonitor/internal/provider"
 )
 
 func createTestModel() *Model {

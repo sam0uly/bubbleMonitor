@@ -6,7 +6,7 @@ import (
 
 	"charm.land/lipgloss/v2"
 
-	"github.com/N1xev/bubbleMonitor/internal/util"
+	"samouly.fun/bubbleMonitor/internal/util"
 )
 
 // GetBorder returns the lipgloss border for the current style

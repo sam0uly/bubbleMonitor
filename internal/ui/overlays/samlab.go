@@ -6,8 +6,8 @@ import (
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/compat"
 
-	"github.com/N1xev/bubbleMonitor/internal/data"
-	"github.com/N1xev/bubbleMonitor/internal/ui/widgets"
+	"samouly.fun/bubbleMonitor/internal/data"
+	"samouly.fun/bubbleMonitor/internal/ui/widgets"
 )
 
 func RenderSamLab(s *data.AppState, p, b, bg color.Color) string {
@@ -50,7 +50,7 @@ func RenderSamLab(s *data.AppState, p, b, bg color.Color) string {
 	content := lipgloss.JoinVertical(
 		lipgloss.Center,
 		titleStyle.Render("Made with love by Alaa El-Samouly"),
-		linkStyle.Render("github.com/N1xev/bubbleMonitor"),
+		linkStyle.Render("https://github.com/sam0uly/bubbleMonitor"),
 		infoStyle.Render(""),
 		infoStyle.Render("License: GNU AGPLv3"),
 		infoStyle.Render("First Release: 2025-12-15"),

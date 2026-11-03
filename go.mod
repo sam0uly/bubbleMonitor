@@ -1,4 +1,4 @@
-module github.com/N1xev/bubbleMonitor
+module samouly.fun/bubbleMonitor
 
 go 1.25.5
 
@@ -8,6 +8,7 @@ require (
 	charm.land/bubbles/v2 v2.0.0
 	charm.land/bubbletea/v2 v2.0.0
 	charm.land/lipgloss/v2 v2.0.0
+	github.com/N1xev/bubbleMonitor v0.6.0
 	github.com/NVIDIA/go-nvml v0.13.0-1
 	github.com/charmbracelet/fang v1.0.0
 	github.com/coreos/go-systemd/v22 v22.7.0

@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	configpkg "github.com/N1xev/bubbleMonitor/internal/config"
+	configpkg "samouly.fun/bubbleMonitor/internal/config"
 )
 
 var (

@@ -10,7 +10,7 @@ import (
 	"github.com/shirou/gopsutil/v3/mem"
 	"github.com/spf13/cobra"
 
-	"github.com/N1xev/bubbleMonitor/internal/util"
+	"samouly.fun/bubbleMonitor/internal/util"
 )
 
 func newSysinfoCmd() *cobra.Command {

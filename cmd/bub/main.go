@@ -8,7 +8,7 @@ import (
 	"os"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/N1xev/bubbleMonitor/internal/app"
+	"samouly.fun/bubbleMonitor/internal/app"
 )
 
 func main() {

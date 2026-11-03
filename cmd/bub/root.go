@@ -11,8 +11,8 @@ import (
 	"github.com/spf13/cobra"
 
 	"charm.land/lipgloss/v2"
-	"github.com/N1xev/bubbleMonitor/internal/app"
-	configpkg "github.com/N1xev/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/app"
+	configpkg "samouly.fun/bubbleMonitor/internal/config"
 )
 
 var (

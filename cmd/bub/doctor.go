@@ -12,8 +12,8 @@ import (
 	"github.com/shirou/gopsutil/v3/host"
 	"github.com/spf13/cobra"
 
-	"github.com/N1xev/bubbleMonitor/internal/cliout"
-	configpkg "github.com/N1xev/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/cliout"
+	configpkg "samouly.fun/bubbleMonitor/internal/config"
 )
 
 func newDoctorCmd() *cobra.Command {

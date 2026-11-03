@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/N1xev/bubbleMonitor/internal/cliout"
-	"github.com/N1xev/bubbleMonitor/internal/ui"
+	"samouly.fun/bubbleMonitor/internal/cliout"
+	"samouly.fun/bubbleMonitor/internal/ui"
 )
 
 // loadCLIStyles creates a CLIStyles instance by resolving the current

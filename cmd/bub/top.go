@@ -11,7 +11,7 @@ import (
 	"github.com/shirou/gopsutil/v3/process"
 	"github.com/spf13/cobra"
 
-	"github.com/N1xev/bubbleMonitor/internal/util"
+	"samouly.fun/bubbleMonitor/internal/util"
 )
 
 var (

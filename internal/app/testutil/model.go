@@ -89,7 +89,6 @@ func NewTestModel() *TestModel {
 				Toasts:                   []data.Toast{},
 				NextToastID:              1,
 				LastError:                "",
-				LastErrorTime:            time.Time{},
 				TickCount:                0,
 				ChartType:                cfg.ChartType,
 				CpuCoreScrollOffset:      0,

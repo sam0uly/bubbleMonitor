@@ -7,7 +7,6 @@ import (
 	"net"
 	"os/exec"
 	"runtime"
-	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -131,10 +130,10 @@ type dockerMemStats struct {
 // Matches the JSON shape returned by "docker stats --no-stream --format
 // '{{json .}}'" when --filter id= is used.
 type dockerStats struct {
-	Read     string                  `json:"read"`
-	CPU      dockerCPUStats          `json:"cpu_stats"`
-	PreCPU   dockerCPUStats          `json:"precpu_stats"`
-	Memory   dockerMemStats          `json:"memory_stats"`
+	Read     string                    `json:"read"`
+	CPU      dockerCPUStats            `json:"cpu_stats"`
+	PreCPU   dockerCPUStats            `json:"precpu_stats"`
+	Memory   dockerMemStats            `json:"memory_stats"`
 	Networks map[string]dockerNetStats `json:"networks"`
 }
 
@@ -151,51 +150,6 @@ func calculateCPUPercent(stats *dockerStats) float64 {
 	}
 
 	return 0
-}
-
-// parseMemValue converts a memory string like "12.5MiB" or "1.0GB" to bytes.
-// Distinguishes binary (KiB/MiB/GiB) and decimal (KB/MB/GB) suffixes so
-// Docker's MiB output and other tools' MB output don't collide.
-func parseMemValue(s string) (uint64, error) {
-	s = strings.TrimSpace(s)
-	if s == "" {
-		return 0, fmt.Errorf("empty memory value")
-	}
-
-	var multiplier uint64 = 1
-	type unit struct {
-		binarySuffix   string
-		decimalSuffix  string
-		binaryMult     uint64
-		decimalMult    uint64
-	}
-	// Order matters: longest binary suffixes first so we don't mis-strip
-	// "MIB" as "MB".
-	units := []unit{
-		{"GIB", "GB", 1024 * 1024 * 1024, 1000 * 1000 * 1000},
-		{"MIB", "MB", 1024 * 1024, 1000 * 1000},
-		{"KIB", "KB", 1024, 1000},
-		{"B", "B", 1, 1},
-	}
-	for _, u := range units {
-		if strings.HasSuffix(s, u.binarySuffix) {
-			s = strings.TrimSuffix(s, u.binarySuffix)
-			multiplier = u.binaryMult
-			break
-		}
-		if strings.HasSuffix(s, u.decimalSuffix) && !strings.HasSuffix(s, "I"+u.decimalSuffix) {
-			s = strings.TrimSuffix(s, u.decimalSuffix)
-			multiplier = u.decimalMult
-			break
-		}
-	}
-
-	s = strings.TrimSpace(s)
-	num, err := strconv.ParseFloat(s, 64)
-	if err != nil {
-		return 0, err
-	}
-	return uint64(num * float64(multiplier)), nil
 }
 
 func fetchDockerContainers() ([]data.ContainerInfo, error) {

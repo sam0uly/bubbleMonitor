@@ -6,8 +6,8 @@ import (
 	"runtime"
 
 	tea "charm.land/bubbletea/v2"
-	"samouly.fun/bubbleMonitor/internal/msg"
 	"github.com/shirou/gopsutil/v3/process"
+	"samouly.fun/bubbleMonitor/internal/msg"
 )
 
 // ReniceProcessCmdSafe changes the priority of a process by a delta

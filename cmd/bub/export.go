@@ -143,7 +143,7 @@ func exportJSON(s metricsSnapshot) error {
 			return err
 		}
 		s := loadCLIStyles()
-		lipgloss.Fprintf(os.Stdout, "%s %s\n", s.CheckOK+s.Label.Render(" Exported snapshot to:"), s.Value.Render(exportOutput))
+		_, _ = lipgloss.Fprintf(os.Stdout, "%s %s\n", s.CheckOK+s.Label.Render(" Exported snapshot to:"), s.Value.Render(exportOutput))
 		return nil
 	}
 	fmt.Println(string(data))
@@ -151,7 +151,7 @@ func exportJSON(s metricsSnapshot) error {
 }
 
 func exportCSV(s metricsSnapshot) error {
-	csv := fmt.Sprintf("timestamp,cpu_percent,memory_percent,memory_used,memory_total,swap_percent,disk_percent,disk_used,disk_total,temp,net_sent_mb,net_recv_mb,load_1m,load_5m,load_15m,uptime\n")
+	csv := "timestamp,cpu_percent,memory_percent,memory_used,memory_total,swap_percent,disk_percent,disk_used,disk_total,temp,net_sent_mb,net_recv_mb,load_1m,load_5m,load_15m,uptime\n"
 	csv += fmt.Sprintf("%s,%.1f,%.1f,%d,%d,%.1f,%.1f,%d,%d,%.0f,%.2f,%.2f,%.2f,%.2f,%.2f,%d\n",
 		s.Timestamp, s.CPU, s.Memory, s.MemoryUsed, s.MemoryTotal,
 		s.Swap, s.Disk, s.DiskUsed, s.DiskTotal,
@@ -163,7 +163,7 @@ func exportCSV(s metricsSnapshot) error {
 			return err
 		}
 		s := loadCLIStyles()
-		lipgloss.Fprintf(os.Stdout, "%s %s\n", s.Label.Render("✓ Exported snapshot to"), s.Value.Render(exportOutput))
+		_, _ = lipgloss.Fprintf(os.Stdout, "%s %s\n", s.Label.Render("✓ Exported snapshot to"), s.Value.Render(exportOutput))
 		return nil
 	}
 	fmt.Print(csv)

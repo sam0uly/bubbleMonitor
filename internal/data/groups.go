@@ -4,8 +4,6 @@ import (
 	"strings"
 	"time"
 
-	"samouly.fun/bubbleMonitor/internal/config"
-	"samouly.fun/bubbleMonitor/internal/ui/input"
 	"github.com/distatus/battery"
 	"github.com/shirou/gopsutil/v3/cpu"
 	"github.com/shirou/gopsutil/v3/disk"
@@ -14,6 +12,8 @@ import (
 	"github.com/shirou/gopsutil/v3/mem"
 	"github.com/shirou/gopsutil/v3/net"
 	"github.com/shirou/gopsutil/v3/process"
+	"samouly.fun/bubbleMonitor/internal/config"
+	"samouly.fun/bubbleMonitor/internal/ui/input"
 )
 
 // MetricsState holds all system metrics and history data.

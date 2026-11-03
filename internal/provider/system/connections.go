@@ -4,9 +4,9 @@ import (
 	"strconv"
 
 	tea "charm.land/bubbletea/v2"
+	"github.com/shirou/gopsutil/v3/net"
 	"samouly.fun/bubbleMonitor/internal/data"
 	"samouly.fun/bubbleMonitor/internal/msg"
-	"github.com/shirou/gopsutil/v3/net"
 )
 
 func ConnectionsCmd() tea.Cmd {

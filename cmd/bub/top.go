@@ -78,17 +78,17 @@ func runTop(cmd *cobra.Command, live bool) error {
 		visible := procs[:topN]
 
 		if live {
-			fmt.Fprintf(out, "\033[H\033[2J") // clear screen
+			_, _ = fmt.Fprintf(out, "\033[H\033[2J") // clear screen
 		}
 
-		fmt.Fprintf(out, "\n  %-8s %-30s %8s %8s  %s\n", "PID", "NAME", "CPU%", "MEM%", "STATUS")
-		fmt.Fprintf(out, "  %s\n", "──────────────────────────────────────────────────────────────")
+		_, _ = fmt.Fprintf(out, "\n  %-8s %-30s %8s %8s  %s\n", "PID", "NAME", "CPU%", "MEM%", "STATUS")
+		_, _ = fmt.Fprintf(out, "  %s\n", "──────────────────────────────────────────────────────────────")
 		for _, p := range visible {
 			name := p.Name
 			if len(name) > 28 {
 				name = name[:25] + "..."
 			}
-			fmt.Fprintf(out, "  %-8d %-30s %8s %8s  %s\n",
+			_, _ = fmt.Fprintf(out, "  %-8d %-30s %8s %8s  %s\n",
 				p.Pid, name,
 				util.FastPercent1(p.Cpu),
 				util.FastPercent1(p.Mem),
@@ -96,15 +96,15 @@ func runTop(cmd *cobra.Command, live bool) error {
 		}
 
 		if !live {
-			fmt.Fprintf(out, "\n")
+			_, _ = fmt.Fprintf(out, "\n")
 			return nil
 		}
 
-		fmt.Fprintf(out, "\n  Refreshing every %ds (press Ctrl+C to quit)\n", topRefresh)
+		_, _ = fmt.Fprintf(out, "\n  Refreshing every %ds (press Ctrl+C to quit)\n", topRefresh)
 
 		select {
 		case <-sigChan:
-			fmt.Fprintf(out, "\n")
+			_, _ = fmt.Fprintf(out, "\n")
 			return nil
 		case <-time.After(time.Duration(topRefresh) * time.Second):
 		}

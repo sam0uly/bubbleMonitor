@@ -34,7 +34,7 @@ func listThemes(cmd *cobra.Command) error {
 	cfg, _ := loadConfigWithOverrides()
 	currentTheme := cfg.Theme
 
-	fmt.Fprintf(out, "\n")
+	_, _ = fmt.Fprintf(out, "\n")
 	for _, name := range themes {
 		marker := " "
 		if name == currentTheme {
@@ -53,9 +53,9 @@ func listThemes(cmd *cobra.Command) error {
 			suffix = "  (active)"
 		}
 
-		fmt.Fprintf(out, "  %s %-15s %s%s\n", marker, name, swatch, suffix)
+		_, _ = fmt.Fprintf(out, "  %s %-15s %s%s\n", marker, name, swatch, suffix)
 	}
-	fmt.Fprintf(out, "\n")
+	_, _ = fmt.Fprintf(out, "\n")
 
 	return nil
 }
@@ -63,5 +63,5 @@ func listThemes(cmd *cobra.Command) error {
 func renderColorSwatch(p ui.ThemePalette) string {
 	// Render a simple visual indicator showing the theme has valid colors
 	// Since AdaptiveColor doesn't expose RGB directly, just show the theme name is registered
-	return fmt.Sprintf("Primary/Secondary/Success/Warning/Alert")
+	return "Primary/Secondary/Success/Warning/Alert"
 }

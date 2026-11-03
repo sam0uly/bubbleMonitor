@@ -44,8 +44,8 @@ func newRootCmd() *cobra.Command {
 	root.PersistentFlags().IntVar(&cfgRefreshRate, "refresh-rate", 0, "refresh interval in milliseconds")
 	root.PersistentFlags().IntVar(&cfgHistoryLen, "history-length", 0, "data points to keep in history charts")
 
-	root.RegisterFlagCompletionFunc("theme", themeCompleter)
-	root.RegisterFlagCompletionFunc("refresh-rate", refreshRateCompleter)
+	_ = root.RegisterFlagCompletionFunc("theme", themeCompleter)
+	_ = root.RegisterFlagCompletionFunc("refresh-rate", refreshRateCompleter)
 
 	// root.AddGroup(&cobra.Group{ID: "monitor", Title: "Monitoring:"})
 	// root.AddGroup(&cobra.Group{ID: "config", Title: "Configuration:"})
@@ -84,11 +84,11 @@ func Execute(version, commit, date string) error {
 				" ",
 				styles.ErrorText.UnsetWidth().UnsetMargins().Render(err.Error()+"."),
 			)
-			fmt.Fprintln(w, line)
-			fmt.Fprintln(w)
+			_, _ = fmt.Fprintln(w, line)
+			_, _ = fmt.Fprintln(w)
 
 			if strings.Contains(err.Error(), "unknown command") || strings.Contains(err.Error(), "unknown flag") {
-				fmt.Fprintln(w, lipgloss.JoinHorizontal(
+				_, _ = fmt.Fprintln(w, lipgloss.JoinHorizontal(
 					lipgloss.Left,
 					styles.ErrorText.UnsetWidth().Render("Try"),
 					styles.Program.Flag.Render(" --help "),

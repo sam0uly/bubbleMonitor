@@ -28,8 +28,8 @@ var (
 )
 
 var (
-	detectOnce    sync.Once
-	capabilities  *data.HardwareCapabilities
+	detectOnce   sync.Once
+	capabilities *data.HardwareCapabilities
 )
 
 func DetectHardware() *data.HardwareCapabilities {

@@ -40,7 +40,7 @@ func printHealth(cmd *cobra.Command) error {
 	out := cmd.OutOrStdout()
 	s := loadCLIStyles()
 
-	lipgloss.Fprintf(out, "\n")
+	_, _ = lipgloss.Fprintf(out, "\n")
 
 	// CPU
 	cpuStatus := "OK"
@@ -51,7 +51,7 @@ func printHealth(cmd *cobra.Command) error {
 		cpuStatus = "HIGH"
 		score -= weights.CpuHigh
 	}
-	lipgloss.Fprintf(out, "  %s  %s (%s)\n",
+	_, _ = lipgloss.Fprintf(out, "  %s  %s (%s)\n",
 		s.Label.Render("CPU:"),
 		styleStatus(s, cpuStatus),
 		s.Value.Render(fmt.Sprintf("%.1f%%", cpuVal)))
@@ -65,7 +65,7 @@ func printHealth(cmd *cobra.Command) error {
 		memStatus = "HIGH"
 		score -= weights.MemHigh
 	}
-	lipgloss.Fprintf(out, "  %s  %s (%s)\n",
+	_, _ = lipgloss.Fprintf(out, "  %s  %s (%s)\n",
 		s.Label.Render("Memory:"),
 		styleStatus(s, memStatus),
 		s.Value.Render(fmt.Sprintf("%.1f%%", memVal)))
@@ -76,7 +76,7 @@ func printHealth(cmd *cobra.Command) error {
 		diskStatus = "CRITICAL"
 		score -= weights.DiskCritical
 	}
-	lipgloss.Fprintf(out, "  %s  %s (%s)\n",
+	_, _ = lipgloss.Fprintf(out, "  %s  %s (%s)\n",
 		s.Label.Render("Disk:"),
 		styleStatus(s, diskStatus),
 		s.Value.Render(fmt.Sprintf("%.1f%%", diskVal)))
@@ -90,7 +90,7 @@ func printHealth(cmd *cobra.Command) error {
 		tempStatus = "HIGH"
 		score -= weights.TempHigh
 	}
-	lipgloss.Fprintf(out, "  %s  %s (%s)\n",
+	_, _ = lipgloss.Fprintf(out, "  %s  %s (%s)\n",
 		s.Label.Render("Temp:"),
 		styleStatus(s, tempStatus),
 		s.Value.Render(fmt.Sprintf("%.0f°C", tempVal)))
@@ -99,7 +99,7 @@ func printHealth(cmd *cobra.Command) error {
 		score = 0
 	}
 
-	lipgloss.Fprintf(out, "\n  %s %s\n\n",
+	_, _ = lipgloss.Fprintf(out, "\n  %s %s\n\n",
 		s.Label.Render("Health Score:"),
 		s.ScoreColor(score).Bold(true).Render(fmt.Sprintf("%d/100", score)))
 

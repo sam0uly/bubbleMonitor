@@ -13,9 +13,9 @@ import (
 )
 
 // DiskInfoCmd fetches disk partition information from two sources:
-//   1. gopsutil's disk.Partitions() — mounted filesystems with usage data.
-//   2. ghw's block.New() — every block device and partition on the host,
-//      including unmounted ones, swap partitions, and Windows/LUKS volumes.
+//  1. gopsutil's disk.Partitions() — mounted filesystems with usage data.
+//  2. ghw's block.New() — every block device and partition on the host,
+//     including unmounted ones, swap partitions, and Windows/LUKS volumes.
 //
 // The two sources are merged into a single list: gopsutil entries win for
 // partitions it already saw (because we have real usage data for them);
@@ -67,9 +67,10 @@ func DiskInfoCmd() tea.Cmd {
 }
 
 // classifyKind returns a Kind for a partition based on its data:
-//   "swap"   – fstype or mountpoint identifies it as swap
-//   "part"   – has a filesystem (or no fs) but isn't actively mounted
-//   "mounted" – has a real filesystem mountpoint
+//
+//	"swap"   – fstype or mountpoint identifies it as swap
+//	"part"   – has a filesystem (or no fs) but isn't actively mounted
+//	"mounted" – has a real filesystem mountpoint
 func classifyKind(fstype, mountpoint string) string {
 	if fstype == "swap" || mountpoint == "[swap]" || mountpoint == "[SWAP]" {
 		return "swap"

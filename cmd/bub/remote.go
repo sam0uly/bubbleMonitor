@@ -41,13 +41,13 @@ func newRemoteListCmd() *cobra.Command {
 				return err
 			}
 			if len(cfg.RemoteHosts) == 0 {
-				fmt.Fprintln(cmd.OutOrStdout(), "No remote hosts configured.")
-				fmt.Fprintln(cmd.OutOrStdout(), "Use 'bub remote add' to add a host.")
+				_, _ = fmt.Fprintln(cmd.OutOrStdout(), "No remote hosts configured.")
+				_, _ = fmt.Fprintln(cmd.OutOrStdout(), "Use 'bub remote add' to add a host.")
 				return nil
 			}
 
 			w := tabwriter.NewWriter(cmd.OutOrStdout(), 0, 0, 2, ' ', 0)
-			fmt.Fprintln(w, "NAME\tHOST\tPORT\tKEY\tTIMEOUT")
+			_, _ = fmt.Fprintln(w, "NAME\tHOST\tPORT\tKEY\tTIMEOUT")
 			for _, h := range cfg.RemoteHosts {
 				port := "-"
 				if h.Port > 0 {
@@ -61,9 +61,9 @@ func newRemoteListCmd() *cobra.Command {
 				if h.KeyPath != "" {
 					key = h.KeyPath
 				}
-				fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\n", h.Name, h.Host, port, key, timeout)
+				_, _ = fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\n", h.Name, h.Host, port, key, timeout)
 			}
-			w.Flush()
+			_ = w.Flush()
 			return nil
 		},
 	}
@@ -107,7 +107,7 @@ func newRemoteAddCmd() *cobra.Command {
 				return fmt.Errorf("failed to save config: %w", err)
 			}
 
-			fmt.Fprintf(cmd.OutOrStdout(), "Added remote host %q (%s)\n", remoteName, remoteHost)
+			_, _ = fmt.Fprintf(cmd.OutOrStdout(), "Added remote host %q (%s)\n", remoteName, remoteHost)
 			return nil
 		},
 	}
@@ -154,7 +154,7 @@ func newRemoteRemoveCmd() *cobra.Command {
 				return fmt.Errorf("failed to save config: %w", err)
 			}
 
-			fmt.Fprintf(cmd.OutOrStdout(), "Removed remote host %q\n", name)
+			_, _ = fmt.Fprintf(cmd.OutOrStdout(), "Removed remote host %q\n", name)
 			return nil
 		},
 	}

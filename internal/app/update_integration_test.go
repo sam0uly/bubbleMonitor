@@ -508,7 +508,10 @@ func TestMessageTypes(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			m := createTestModel()
 			newModel, _ := m.Update(tt.msg)
-			updatedModel := newModel.(*Model)
+			updatedModel, ok := newModel.(*Model)
+			if !ok {
+				t.Fatalf("expected *Model, got %T", newModel)
+			}
 			tt.validate(t, updatedModel)
 		})
 	}
@@ -837,7 +840,10 @@ func TestKeySequences(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			m := tt.initial()
 			newModel, _ := m.Update(tt.keyPress)
-			updatedModel := newModel.(*Model)
+			updatedModel, ok := newModel.(*Model)
+			if !ok {
+				t.Fatalf("expected *Model, got %T", newModel)
+			}
 			tt.validate(t, updatedModel)
 		})
 	}
@@ -951,7 +957,10 @@ func TestErrorPaths(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			m := tt.setup()
 			newModel, _ := m.Update(tt.msg)
-			updatedModel := newModel.(*Model)
+			updatedModel, ok := newModel.(*Model)
+			if !ok {
+				t.Fatalf("expected *Model, got %T", newModel)
+			}
 			tt.check(t, updatedModel)
 		})
 	}
@@ -1065,7 +1074,11 @@ func TestStartupFlow(t *testing.T) {
 			var currentModel *Model = m
 			for _, step := range tt.steps {
 				newModel, _ := step(currentModel)
-				currentModel = newModel.(*Model)
+				var ok bool
+				currentModel, ok = newModel.(*Model)
+				if !ok {
+					t.Fatalf("expected *Model, got %T", newModel)
+				}
 			}
 			tt.validate(t, currentModel)
 		})
@@ -1166,7 +1179,11 @@ func TestProcessKillFlow(t *testing.T) {
 			var currentModel *Model = m
 			for _, step := range tt.steps {
 				newModel, _ := step(currentModel)
-				currentModel = newModel.(*Model)
+				var ok bool
+				currentModel, ok = newModel.(*Model)
+				if !ok {
+					t.Fatalf("expected *Model, got %T", newModel)
+				}
 			}
 			tt.validate(t, currentModel)
 		})
@@ -1277,7 +1294,10 @@ func TestTabSwitchFlow(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			m := tt.initial()
 			newModel, _ := m.Update(tt.keyPress)
-			updatedModel := newModel.(*Model)
+			updatedModel, ok := newModel.(*Model)
+			if !ok {
+				t.Fatalf("expected *Model, got %T", newModel)
+			}
 			tt.validate(t, updatedModel)
 		})
 	}
@@ -1419,7 +1439,10 @@ func TestSettingsFlow(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			m := tt.initial()
 			newModel, _ := m.Update(tt.keyPress)
-			updatedModel := newModel.(*Model)
+			updatedModel, ok := newModel.(*Model)
+			if !ok {
+				t.Fatalf("expected *Model, got %T", newModel)
+			}
 			tt.validate(t, updatedModel)
 		})
 	}
@@ -1477,7 +1500,10 @@ func TestRenderCache(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			m := tt.setup()
 			newModel, _ := m.Update(tt.msg)
-			updatedModel := newModel.(*Model)
+			updatedModel, ok := newModel.(*Model)
+			if !ok {
+				t.Fatalf("expected *Model, got %T", newModel)
+			}
 			tt.validate(t, updatedModel)
 		})
 	}

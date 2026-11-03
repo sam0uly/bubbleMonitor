@@ -13,7 +13,7 @@ func newVersionCmd() *cobra.Command {
 		Args:  cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			s := loadCLIStyles()
-			lipgloss.Fprintf(cmd.OutOrStdout(), "%s %s (commit: %s, built: %s)\n", s.Label.Render("bub"), s.Value.Render(buildVersion), s.Value.Render(buildCommit), s.Value.Render(buildDate))
+			_, _ = lipgloss.Fprintf(cmd.OutOrStdout(), "%s %s (commit: %s, built: %s)\n", s.Label.Render("bub"), s.Value.Render(buildVersion), s.Value.Render(buildCommit), s.Value.Render(buildDate))
 			return nil
 		},
 	}
